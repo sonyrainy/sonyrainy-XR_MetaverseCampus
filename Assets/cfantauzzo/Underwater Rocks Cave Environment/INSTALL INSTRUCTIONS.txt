@@ -1,0 +1,11 @@
+Standard Render Pipeline:
+
+Make sure Color Space is set to Linear. Make sure Post Processing is installed via the Package Manager, then restart the editor. Navigate to Assets>cfantauzzo>Underwater Rocks Cave Environment and import URCE_SD.unitypackage.
+
+Universal Render Pipeline:
+
+Make sure Color Space is set to Linear. Navigate to Assets>cfantauzzo>Underwater Rocks Cave Environment and import URCE_URP.unitypackage. Use your own UniversalRP.asset or use the one included in the RenderPipeline folder.
+
+High Definition Render Pipeline:
+
+Make sure Color Space is set to Linear. Navigate to Assets>cfantauzzo>Underwater Rocks Cave Environment and import URCE_HDRP.unitypackage. Use your own HDRenderPipelineAsset.asset or use the one included in the RenderPipeline folder.
