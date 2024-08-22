@@ -1450,17 +1450,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: b843216449602684aa10dda621dd34b1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.408
+      value: -8.366
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b843216449602684aa10dda621dd34b1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.138
+      value: 1.317
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b843216449602684aa10dda621dd34b1,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.786
+      value: -0.785
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b843216449602684aa10dda621dd34b1,
         type: 3}
@@ -2791,6 +2791,7 @@ MonoBehaviour:
   - {fileID: 645509628}
   - {fileID: 645509627}
   - {fileID: 645509626}
+  selectSound: {fileID: 8300000, guid: 04213f14ae5074a84b3c41aef6b6a00f, type: 3}
 --- !u!4 &250269511
 Transform:
   m_ObjectHideFlags: 0
@@ -4501,7 +4502,7 @@ Transform:
   m_GameObject: {fileID: 580315430}
   serializedVersion: 2
   m_LocalRotation: {x: -0.5279018, y: -0.46206412, z: 0.571449, w: -0.42574927}
-  m_LocalPosition: {x: -9.029, y: 1.085, z: 0.667}
+  m_LocalPosition: {x: -8.987, y: 1.402, z: 0.339}
   m_LocalScale: {x: 0.12232406, y: 0.12232406, z: 0.141638}
   m_ConstrainProportionsScale: 0
   m_Children: []

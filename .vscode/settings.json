@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "MetaHong.sln"
+    "dotnet.defaultSolution": "MetaHongProject.sln"
 }
