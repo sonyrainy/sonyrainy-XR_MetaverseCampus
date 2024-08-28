@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/01_Scenes/Scenes/05_LastBattle_2.unity
     guid: f99efedef8f7ca94f8c4ceb335ddd8e5
   - enabled: 1
+    path: Assets/01_Scenes/Scenes/07_LastGun.unity
+    guid: 903cf442376a1f74289ee37632a92778
+  - enabled: 1
     path: Assets/01_Scenes/Scenes/06_LastMovie.unity
     guid: f4177ff6138a08c4298fb33686a46049
   m_configObjects:

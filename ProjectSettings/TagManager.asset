@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - BULLET
+  - ENEMY
+  - FRIENDLY
+  - HONG
+  - WEAPON
+  - MuzzleFlash
   layers:
   - Default
   - TransparentFX

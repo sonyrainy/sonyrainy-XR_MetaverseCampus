@@ -2,12 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.SceneManagement;
 public class ShootHong : MonoBehaviour
 {
     public GameObject bulletPrefab; // 발사할 총알 프리팹
     public Transform firePoint; // 총알이 발사될 위치
     public float bulletSpeed = 20f; // 총알 속도
     private MeshRenderer muzzleFlash;
+
+    public string FriendlyTag = "FRIENDLY"; // 적 오브젝트들의 태그
+    public string boolParameterName2 = "IsGunShoot"; // Animator의 Bool 파라미터 이름
+    public bool canShoot = false; // 총을 쏠 수 있는지 여부를 나타내는 플래그
+    public MuzzleFlashManager muzzleFlashManager; // MuzzleFlashManager를 참조할 변수 추가
+    private bool IsShooting = false;
+    private int ShootCount = 0;
+    
+    public GameObject WinText;
+    public GameObject weatherText;
+
 
     void Start()
     {
@@ -24,8 +36,46 @@ public class ShootHong : MonoBehaviour
     // Activate 이벤트가 발생할 때 호출되는 함수
     void OnActivated(ActivateEventArgs args)
     {
-        ShootBullet();
+         if (canShoot)
+        {
+            ShootBullet();
+            if(!IsShooting)
+            {
+                muzzleFlashManager.StartContinuousFlash();
+                IsShooting = true;
+                
+                
+            }
+            
+                if(ShootCount>3)
+                {
+                    
+                    GameObject[] enemies = GameObject.FindGameObjectsWithTag("ENEMY");
+                    foreach (GameObject enemy in enemies)
+                    {
+                    // 180도 회전 (Y축 기준)
+                        enemy.transform.Rotate(0, -180, 0);
+                    // 애니메이션 활성화
+                        Animator enemyAnimator = enemy.GetComponent<Animator>();
+                        enemyAnimator.SetBool("IsLookingAround", false); // 애니메이션 트리거 
+                        StartCoroutine(ResetTrigger(enemyAnimator)); // 일정 시간 후 다시 false로 설정
+                        weatherText.SetActive(false);
+                        
+
+                    }
+                    ShootCount=0;
+                }
+        }
     }
+    private IEnumerator ResetTrigger(Animator animator)
+{
+    yield return new WaitForSeconds(10f); // 애니메이션 재생 후 대기 시간
+    WinText.SetActive(true);
+    animator.SetBool("IsLookingAround", true); // 애니메이션 종료
+
+    yield return new WaitForSeconds(2f);
+    SceneManager.LoadScene("06_LastMovie");
+}
 
     void ShootBullet()
     {
@@ -34,6 +84,10 @@ public class ShootHong : MonoBehaviour
         Rigidbody rb = bullet.GetComponent<Rigidbody>();
         rb.velocity = firePoint.forward * bulletSpeed;
          StartCoroutine(ShowMuzzleFlash()); //총구화염효과 코루틴함수 호출
+
+         GameObject[] Friendlys = GameObject.FindGameObjectsWithTag(FriendlyTag);
+         muzzleFlashManager.StartContinuousFlash();
+         ShootCount++;
 
         // 일정 시간 후 총알 제거
         Destroy(bullet, 2.0f);
