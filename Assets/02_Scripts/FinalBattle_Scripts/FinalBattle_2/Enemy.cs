@@ -5,9 +5,9 @@ using UnityEngine.AI;
 public class Enemy : MonoBehaviour
 {
     public Transform player;
-    public float minMoveSpeed = 3.5f; // 최소 달리기 속도 (NavMeshAgent의 speed 값)
-    public float maxMoveSpeed = 5.5f; // 최대 달리기 속도 (NavMeshAgent의 speed 값)
-    public int health = 3; // 체력
+    private float minMoveSpeed = 1.3f;
+    private float maxMoveSpeed = 2.8f;
+    public int health = 3;
 
     private NavMeshAgent navMeshAgent;
     private Animator animator;
@@ -19,33 +19,28 @@ public class Enemy : MonoBehaviour
         navMeshAgent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
 
-        // 무작위 달리기 속도 설정
         navMeshAgent.speed = Random.Range(minMoveSpeed, maxMoveSpeed);
 
-        // 시작할 때 NavMeshAgent 비활성화 및 isRunning 애니메이션 false
         navMeshAgent.enabled = false;
         animator.SetBool("isRunning", false);
 
-        // 3초 후에 NavMeshAgent 활성화 및 추적 시작
         StartCoroutine(WaitAndStartChasing(3f));
-
-        // GameManager에 자신 등록
-        GameManager.Instance.RegisterEnemy(this);
     }
+
+    private Vector3 lastPlayerPosition;
 
     void Update()
     {
         if (isDead || isFleeing || !navMeshAgent.enabled) return;
 
-        // 적군이 죽으면 정지
         if (health <= 0)
         {
             navMeshAgent.isStopped = true;
         }
-        else if (navMeshAgent.isOnNavMesh)
+        else if (navMeshAgent.isOnNavMesh && player.position != lastPlayerPosition)
         {
-            // 적이 플레이어를 계속 추적하도록 설정
             navMeshAgent.SetDestination(player.position);
+            lastPlayerPosition = player.position;
         }
     }
 
@@ -55,11 +50,10 @@ public class Enemy : MonoBehaviour
 
         if (!isDead)
         {
-            // NavMeshAgent 활성화 및 추적 시작
             navMeshAgent.enabled = true;
             if (navMeshAgent.isOnNavMesh)
             {
-                animator.SetBool("isRunning", true); // 달리는 애니메이션 활성화
+                animator.SetBool("isRunning", true);
                 navMeshAgent.SetDestination(player.position);
             }
         }
@@ -67,7 +61,7 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(int amount)
     {
-        if (isDead) return; // 이미 죽은 경우 처리하지 않음
+        if (isDead) return;
 
         health -= amount;
         if (health <= 0)
@@ -78,46 +72,36 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
-        // 적군 죽음 처리
         isDead = true;
-        Debug.Log($"{gameObject.name} died."); // 적군이 죽었을 때 디버그 로그 출력
-        animator.SetBool("isRunning", false); // 달리는 애니메이션 비활성화
-        animator.SetTrigger("isDead"); // 죽는 애니메이션 활성화
-        navMeshAgent.isStopped = true; // 이동 정지
+        Debug.Log($"{gameObject.name} died.");
+        animator.SetBool("isRunning", false);
+        animator.SetTrigger("isDead");
+        navMeshAgent.isStopped = true;
         navMeshAgent.updatePosition = false;
         navMeshAgent.updateRotation = false;
-        GetComponent<Collider>().enabled = false; // 콜라이더 비활성화
-
-        // GameManager에 자신 제거 알림
-        GameManager.Instance.UnregisterEnemy(this);
+        GetComponent<Collider>().enabled = false;
 
         StartCoroutine(WaitForDeathAnimation());
     }
 
     private IEnumerator WaitForDeathAnimation()
     {
-        // 죽는 애니메이션이 끝날 때까지 대기
         yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
-        
-        // 추가적으로 10초 동안 대기
         yield return new WaitForSeconds(10f);
 
-        // 오브젝트 파괴
-        Debug.Log($"{gameObject.name} is destroyed."); // 오브젝트가 파괴될 때 디버그 로그 출력
+        Debug.Log($"{gameObject.name} is destroyed.");
         Destroy(gameObject);
-        GameManager.Instance.EnemyKilled(); // GameManager에 적의 죽음을 알림
     }
 
     public void FleeFromPlayer()
     {
-        if (isDead || !navMeshAgent.isOnNavMesh) return; // 이미 죽은 경우 또는 NavMesh에 없는 경우 처리하지 않음
+        if (isDead || !navMeshAgent.isOnNavMesh) return;
 
         isFleeing = true;
-        Debug.Log($"{gameObject.name} is fleeing from player."); // 적군이 도망갈 때 디버그 로그 출력
+        Debug.Log($"{gameObject.name} is fleeing from player.");
         Vector3 fleeDirection = (transform.position - player.position).normalized;
-        Vector3 fleePosition = transform.position + fleeDirection * 10f; // 10 단위 거리만큼 플레이어 반대 방향으로 이동
+        Vector3 fleePosition = transform.position + fleeDirection * 10f;
 
-        // NavMesh 상의 도망가는 위치 설정
         NavMeshHit hit;
         if (NavMesh.SamplePosition(fleePosition, out hit, 10f, NavMesh.AllAreas))
         {
@@ -128,8 +112,18 @@ public class Enemy : MonoBehaviour
             navMeshAgent.SetDestination(transform.position - fleeDirection * 10f);
         }
 
-        navMeshAgent.speed = maxMoveSpeed; // 도망갈 때 최대 속도로 설정
-        navMeshAgent.isStopped = false; // NavMeshAgent 다시 시작
-        animator.SetBool("isRunning", true); // 달리는 애니메이션 활성화
+        navMeshAgent.speed = maxMoveSpeed;
+        navMeshAgent.isStopped = false;
+        animator.SetBool("isRunning", true);
+    }
+
+    // 추가된 코드: 총알에 맞았을 때 처리
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("PlayerBullet"))
+        {
+            TakeDamage(1); // 총알의 데미지를 1로 가정
+            Destroy(other.gameObject); // 총알 파괴
+        }
     }
 }

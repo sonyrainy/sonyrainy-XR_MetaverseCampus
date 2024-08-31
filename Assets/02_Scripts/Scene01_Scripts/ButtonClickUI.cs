@@ -9,7 +9,6 @@ public class CheckManager : MonoBehaviour
      public string targetText; // 확인할 텍스트를 public 변수로 설정
      public HingeJoint boxHingeJoint; // 힌지 조인트를 참조할 필드
      public GameObject wall;
-     public GameObject UITrap;
 
 
 
@@ -27,8 +26,6 @@ public class CheckManager : MonoBehaviour
             // 여기에 원하는 작업을 추가하세요.
             CorrectAnswer();
             wall.SetActive(false);
-            UITrap.SetActive(true);
-            
         }
         else
         {
