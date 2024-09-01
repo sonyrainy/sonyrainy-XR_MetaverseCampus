@@ -10,6 +10,8 @@ TagManager:
   - HONG
   - WEAPON
   - MuzzleFlash
+  - WALL
+  - PLAYER
   layers:
   - Default
   - TransparentFX
