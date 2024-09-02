@@ -18,8 +18,10 @@ public class GrapRedKey : MonoBehaviour
 
     public void OnSelectEntered(SelectEnterEventArgs args)
     {
+        Debug.Log("잡혔다");
         GrapKey();
         GrapKey2();
+
         
         // 사운드 재생
         if (grabSound != null)

@@ -38,6 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0.18328685, g: 0.22892013, b: 0.30630922, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -801,10 +802,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5cd35a5a45cbfb418dce2e49a806876, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundMusicClip: {fileID: 8300000, guid: 3682e73cfa6b33048b8003b3a3c276ff, type: 3}
   nextSceneName: 04_Cave
-  musicDelay: 20
-  sceneDelay: 120
 --- !u!4 &154311364
 Transform:
   m_ObjectHideFlags: 0
@@ -1877,7 +1875,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 419389417}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 786590a3da65ebb418476d1accb5915e, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: fbaf7c5c6f3aa8046b4c3a048c9179ee, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -1915,7 +1913,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 428.5907, y: 10.59104, z: 670.89264}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3094, y: 1.3094, z: 1.3094}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -8121,7 +8119,7 @@ RectTransform:
   m_GameObject: {fileID: 1201363174}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 670.6592}
-  m_LocalScale: {x: 0.053672127, y: 0.040708873, z: 0.080786}
+  m_LocalScale: {x: 0.06669775, y: 0.050588455, z: 0.10039185}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 70164615}
@@ -8129,7 +8127,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 432.99445, y: 11.34}
+  m_AnchoredPosition: {x: 433.04, y: 11.81}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &1217684684 stripped
@@ -8849,7 +8847,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 432.99445, y: 12.916365, z: 670.6592}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1149, y: 1.1149, z: 1.1149}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -11775,12 +11773,12 @@ MonoBehaviour:
   m_RequiresColorTexture: 0
   m_Version: 2
   m_TaaSettings:
-    m_Quality: 3
-    m_FrameInfluence: 0.1
-    m_JitterScale: 1
-    m_MipBias: 0
-    m_VarianceClampScale: 0.9
-    m_ContrastAdaptiveSharpening: 0
+    quality: 3
+    frameInfluence: 0.1
+    jitterScale: 1
+    mipBias: 0
+    varianceClampScale: 0.9
+    contrastAdaptiveSharpening: 0
 --- !u!114 &1623472938
 MonoBehaviour:
   m_ObjectHideFlags: 0
