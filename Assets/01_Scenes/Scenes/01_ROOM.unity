@@ -7232,7 +7232,8 @@ MonoBehaviour:
   m_UpdateTrackingType: 0
   m_EnableInputTracking: 1
   m_EnableInputActions: 1
-  m_ModelPrefab: {fileID: 388107361}
+  m_ModelPrefab: {fileID: 8270855663187062767, guid: 1392f805216c47742996d4742c80721c,
+    type: 3}
   m_ModelParent: {fileID: 388107361}
   m_Model: {fileID: 0}
   m_AnimateModel: 0
@@ -22962,10 +22963,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LeftHand: {fileID: 0}
   m_RightHand: {fileID: 0}
-  m_LeftController: {fileID: 4245457492171364763, guid: c836783e3928a624e9ff9c70d4f21606,
-    type: 3}
-  m_RightController: {fileID: 4024951872544157354, guid: cfa8dc06d611ba340b06bbefba58ee46,
-    type: 3}
+  m_LeftController: {fileID: 388107360}
+  m_RightController: {fileID: 2111832356}
   m_TrackedHandModeStarted:
     m_PersistentCalls:
       m_Calls: []
@@ -39650,7 +39649,7 @@ MonoBehaviour:
   m_UpdateTrackingType: 0
   m_EnableInputTracking: 1
   m_EnableInputActions: 1
-  m_ModelPrefab: {fileID: 108325808751205561, guid: cfa8dc06d611ba340b06bbefba58ee46,
+  m_ModelPrefab: {fileID: 3475118261464492563, guid: 9f3369e30fbd31f4bb596b1a99babe83,
     type: 3}
   m_ModelParent: {fileID: 2111832357}
   m_Model: {fileID: 0}

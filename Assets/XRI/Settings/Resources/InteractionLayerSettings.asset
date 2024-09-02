@@ -15,8 +15,6 @@ MonoBehaviour:
   m_LayerNames:
   - Default
   - Climb
-  - Direct
-  - Poke
   - 
   - 
   - 
@@ -44,4 +42,6 @@ MonoBehaviour:
   - 
   - 
   - 
+  - 
+  - REDEKY
   - Teleport
