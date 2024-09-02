@@ -333,7 +333,6 @@ Transform:
   - {fileID: 1654347165}
   - {fileID: 306843379}
   - {fileID: 1805335170}
-  - {fileID: 1472885298}
   - {fileID: 2108328688}
   m_Father: {fileID: 429556756}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10517,7 +10516,8 @@ Transform:
   m_LocalPosition: {x: -9.3586235, y: 31.65118, z: -27.875652}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1472885298}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &960161685
@@ -16789,27 +16789,32 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 18721964}
+    m_TransformParent: {fileID: 949632086}
     m_Modifications:
     - target: {fileID: 3708520984443563272, guid: 097b546040c64064bb0649ca30e891eb,
         type: 3}
       propertyPath: m_AffordanceStateProvider
       value: 
       objectReference: {fileID: 429556753}
+    - target: {fileID: 7842163277692871923, guid: 097b546040c64064bb0649ca30e891eb,
+        type: 3}
+      propertyPath: sceneName
+      value: 06_LastMovie
+      objectReference: {fileID: 0}
     - target: {fileID: 8190011902338369033, guid: 097b546040c64064bb0649ca30e891eb,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.48
+      value: 23.318623
       objectReference: {fileID: 0}
     - target: {fileID: 8190011902338369033, guid: 097b546040c64064bb0649ca30e891eb,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.686
+      value: -30.69518
       objectReference: {fileID: 0}
     - target: {fileID: 8190011902338369033, guid: 097b546040c64064bb0649ca30e891eb,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.494
+      value: 24.249653
       objectReference: {fileID: 0}
     - target: {fileID: 8190011902338369033, guid: 097b546040c64064bb0649ca30e891eb,
         type: 3}
@@ -16854,7 +16859,7 @@ PrefabInstance:
     - target: {fileID: 8527959366827469305, guid: 097b546040c64064bb0649ca30e891eb,
         type: 3}
       propertyPath: m_Name
-      value: FinalClimb
+      value: FinalClimb & SceneChangeManager
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
