@@ -15,7 +15,7 @@ public class SocketEventHandler : MonoBehaviour
         if (boxHingeJoint != null)
         {
             JointLimits limits = boxHingeJoint.limits;
-            limits.max = 90; // max 값을 90으로 설정
+            limits.max = 60; // max 값을 90으로 설정
             boxHingeJoint.limits = limits; // 변경된 제한을 힌지 조인트에 적용
             
         }
