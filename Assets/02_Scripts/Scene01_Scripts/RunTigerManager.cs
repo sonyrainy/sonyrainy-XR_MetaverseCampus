@@ -10,7 +10,7 @@ public class RunTigerManager : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         // 트리거된 오브젝트가 플레이어인지 확인 (플레이어 태그를 "Player"로 설정했다고 가정)
-        if (other.CompareTag("PLAYER"))
+        if (other.CompareTag("Player"))
         {
             targetObject.SetActive(true);
         }
