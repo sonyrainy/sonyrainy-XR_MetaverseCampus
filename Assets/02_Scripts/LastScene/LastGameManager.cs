@@ -14,12 +14,21 @@ public class LastGameManager : MonoBehaviour
     // 활성화할 게임 오브젝트(fog)
     public GameObject objectToActivate;
 
+    // 5초 뒤에 파괴할 게임 오브젝트
+    public GameObject objectToDestroy;
+
     void Start()
     {
         // 처음에는 특정 오브젝트를 비활성화
         if (objectToActivate != null)
         {
             objectToActivate.SetActive(false);
+        }
+
+        // 5초 뒤에 파괴할 오브젝트 설정
+        if (objectToDestroy != null)
+        {
+            Destroy(objectToDestroy, 5f); // 5초 후에 파괴
         }
     }
 
