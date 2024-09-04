@@ -34,9 +34,39 @@
   - ElevenLabs
   - Vrew
   - LUMA AI
-
+  - Chat GPT - 파이썬 과 아무튼 그유튜브영상거 크롤링함
+  
  - Figma
 
 ### 4. 스테이지별 설명
 
-1)
+→ 게임 진행은 빛과 UI를 통해 안내됩니다.
+
+#### 1_ROOM: 방탈출 + VR 게임 미션
+
+![image](https://github.com/user-attachments/assets/5f141997-341a-41c9-b7fc-08890b3c3dd2)
+
+지문을 확인하여 문제를 추측하고,
+
+![image](https://github.com/user-attachments/assets/befdbdd2-c091-4f1c-949f-248c75a66f9d)
+
+게임 미션을 해결해야 합니다.
+
+#### 2_CAVE: 방탈출
+
+![image](https://github.com/user-attachments/assets/ad45f735-6954-4000-9df8-60d2d2b7584c)
+
+Climbing과 Puzzle을 활용하여
+
+![image](https://github.com/user-attachments/assets/87fefa85-c37a-4b02-be95-efa5377d54f5)
+
+동굴을 탈출합니다.
+ 
+#### 3_LASTBATTLE_1: 방탈출
+
+![image](https://github.com/user-attachments/assets/dabf776f-f2ce-454b-a3e5-3e40b580e03b)
+
+
+#### 4_LASTBATTLE_2: VR 게임
+
+#### 5_LASTGUN: VR 슈팅 게임
