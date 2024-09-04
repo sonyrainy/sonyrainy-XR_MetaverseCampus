@@ -66,7 +66,10 @@ Climbing과 Puzzle을 활용하여
 
 ![image](https://github.com/user-attachments/assets/dabf776f-f2ce-454b-a3e5-3e40b580e03b)
 
+Lever 등 여러 단서를 통해서 방탈출 문제를 해결합니다. 
 
 #### 4_LASTBATTLE_2: VR 게임
+
+
 
 #### 5_LASTGUN: VR 슈팅 게임
