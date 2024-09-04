@@ -36,7 +36,7 @@
   - Vrew
   - LUMA AI
   - Chat GPT
-    - 파이썬을 활용해 UNITY 공식 채널 [SOLID 원칙](https://www.youtube.com/watch?v=eIf3-aDTOOA)에 관한 약 1시간 가량의 분량의 오디오 파일을 추출
+    - 파이썬을 활용해 Unity 공식 채널 [SOLID 원칙](https://www.youtube.com/watch?v=eIf3-aDTOOA)에 관한 약 1시간 가량의 분량의 오디오 파일을 추출
     - Clova Note를 활용하여 오디오 파일을 문서화
     - Chat GPT → Knowledge 부분에 첨부하여, 참고용 Unity 최적화 ChatBot 생성
   
