@@ -97,11 +97,11 @@ Lever 등 여러 단서를 통해서 방탈출 문제를 해결합니다.
 <table align="center" width="788">
 <thead>
 <tr>
-<th width="130" align="center">📝성명</th>
-<th width="270" align="center">🎁소속</th>
-<th width="150" align="center">🚩역할</th>
-<th width="100" align="center">🐱깃허브</th>
-<th width="180" align="center">📩이메일</th>
+<th width="130" align="center">성명</th>
+<th width="270" align="center">소속</th>
+<th width="150" align="center">역할</th>
+<th width="100" align="center">깃허브</th>
+<th width="180" align="center">이메일</th>
 </tr> 
 </thead>
 <tbody>
