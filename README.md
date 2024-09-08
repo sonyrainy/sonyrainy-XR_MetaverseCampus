@@ -1,4 +1,4 @@
-😊경기 콘텐츠 진흥원 - **XR METAVERSE CAMPUS(XR CENTER) 행사**에 출품하여 1등상(경기도지사상)을 수상한 VR 역사 방탈출 프로젝트 **META-HONG**입니다.😄
+😊경기 콘텐츠 진흥원 - **XR METAVERSE CAMPUS(XR CENTER) 행사**에 출품하여 "경기도지사상"을 수상한 VR 역사 방탈출 프로젝트 **META-HONG**입니다.😄
 
 ---
 
