@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\sonyrainy\\Desktop\\Meta-Hong Project\\XR_MetaverseCampus\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{319D3898-3449-B200-020C-4317AFC9ED7B}|Assembly-CSharp.csproj|c:\\users\\sonyrainy\\desktop\\meta-hong project\\xr_metaversecampus\\assets\\02_scripts\\bullet_enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{319D3898-3449-B200-020C-4317AFC9ED7B}|Assembly-CSharp.csproj|solutionrelative:assets\\02_scripts\\bullet_enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Bullet_Enemy.cs",
+              "DocumentMoniker": "C:\\Users\\sonyrainy\\Desktop\\Meta-Hong Project\\XR_MetaverseCampus\\Assets\\02_Scripts\\Bullet_Enemy.cs",
+              "RelativeDocumentMoniker": "Assets\\02_Scripts\\Bullet_Enemy.cs",
+              "ToolTip": "C:\\Users\\sonyrainy\\Desktop\\Meta-Hong Project\\XR_MetaverseCampus\\Assets\\02_Scripts\\Bullet_Enemy.cs",
+              "RelativeToolTip": "Assets\\02_Scripts\\Bullet_Enemy.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-10T11:50:29.66Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
