@@ -169,3 +169,8 @@ Lever 등 여러 단서를 통해서 방탈출 문제를 해결합니다.
 </tbody>
 </table> 
 
+
+참고: 
+- [전국매일신문](https://www.jeonmae.co.kr/news/articleView.html?idxno=1073901)
+- [서울Pn](https://go.seoul.co.kr/news/newsView.php?id=20240910500038)
+
