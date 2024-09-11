@@ -143,4 +143,29 @@ Lever 등 여러 단서를 통해서 방탈출 문제를 해결합니다.
 </table>
 <br>
 
- **※ Asset(3D modeling) Support: 주재석 (Ajou Univ - Digital Media)**
+ > Asset Supporter
+<br>
+<table align="center" width="788">
+<thead>
+<tr>
+<th width="130" align="center">성명</th>
+<th width="270" align="center">소속</th>
+<th width="150" align="center">역할</th>
+<th width="180" align="center">이메일</th>
+</tr> 
+</thead>
+<tbody>
+<tr>
+<td width="130" align="center">주재석<br/></td>
+<td width="270" align="center">Ajou Univ - Digital Media</td>
+<td width="150">3D 모델링</td>
+
+<td width="175" align="center">
+   <a href="mailto:jujae77@ajou.ac.kr">
+                <img src="https://img.shields.io/badge/jujae77-655ced?style=social&logo=gmail"/>
+   </a>
+</td>
+
+</tbody>
+</table> 
+
